@@ -81,7 +81,7 @@ const player = new Fighter({
       x: 50,
       y: 50
     },
-    width: 140,
+    width: 130,
     height: 50,
   }
 })
@@ -100,49 +100,49 @@ const enemy = new Fighter({
     x: -50,
     y: 0
   },
-  imageSrc: './img/kenji/Idle.png',
-  framesMax: 4,
+  imageSrc: './img/samuraiMack/Idle.png',
+  framesMax: 8,
   scale: 2.5,
   offset: {
     x: 215,
-    y: 170
+    y: 155
   },
   sprites: {
     idle: {
-      imageSrc: './img/kenji/Idle.png',
-      framesMax: 4
+      imageSrc: './img/samuraiMack/Idle.png',
+      framesMax: 8
     },
     run: {
-      imageSrc: './img/kenji/Run.png',
+      imageSrc: './img/samuraiMack/Run.png',
       framesMax: 8
     },
     jump: {
-      imageSrc: './img/kenji/Jump.png',
+      imageSrc: './img/samuraiMack/Jump.png',
       framesMax: 2
     },
     fall: {
-      imageSrc: './img/kenji/Fall.png',
+      imageSrc: './img/samuraiMack/Fall.png',
       framesMax: 2
     },
     attack1: {
-      imageSrc: './img/kenji/Attack1.png',
-      framesMax: 4
+      imageSrc: './img/samuraiMack/Attack1.png',
+      framesMax: 6
     },
     takeHit: {
-      imageSrc: './img/kenji/Take hit.png',
-      framesMax: 3
+      imageSrc: './img/samuraiMack/Take hit.png',
+      framesMax: 4
     },
     death: {
-      imageSrc: './img/kenji/Death.png',
-      framesMax: 7
+      imageSrc: './img/samuraiMack/Death.png',
+      framesMax: 6
     }
   },
   attackBox: {
     offset: {
-      x: -170,
+      x: -160,
       y: 50
     },
-    width: 170,
+    width: 160,
     height: 50
   }
 })
@@ -246,7 +246,7 @@ function animate() {
       rectangle2: player
     }) &&
     enemy.isAttacking &&
-    enemy.framesCurrent === 2
+    enemy.framesCurrent === 4
   ) {
     player.takeHit()
     enemy.isAttacking = false
@@ -257,7 +257,7 @@ function animate() {
   }
 
   // if player misses
-  if (enemy.isAttacking && enemy.framesCurrent === 2) {
+  if (enemy.isAttacking && enemy.framesCurrent === 4) {
     enemy.isAttacking = false
   }
 
