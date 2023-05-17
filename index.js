@@ -224,7 +224,7 @@ function animate() {
       rectangle2: enemy
     }) &&
     player.isAttacking &&
-    player.framesCurrent === 4
+    player.framesCurrent === 2
   ) {
     enemy.takeHit()
     player.isAttacking = false
@@ -235,7 +235,7 @@ function animate() {
   }
 
   // if player misses
-  if (player.isAttacking && player.framesCurrent === 4) {
+  if (player.isAttacking && player.framesCurrent === 2) {
     player.isAttacking = false
   }
 
@@ -246,7 +246,7 @@ function animate() {
       rectangle2: player
     }) &&
     enemy.isAttacking &&
-    enemy.framesCurrent === 4
+    enemy.framesCurrent === 2
   ) {
     player.takeHit()
     enemy.isAttacking = false
@@ -257,7 +257,7 @@ function animate() {
   }
 
   // if player misses
-  if (enemy.isAttacking && enemy.framesCurrent === 4) {
+  if (enemy.isAttacking && enemy.framesCurrent === 2) {
     enemy.isAttacking = false
   }
 
